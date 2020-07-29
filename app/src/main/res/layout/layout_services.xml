@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="170dp"
+        app:cardCornerRadius="@dimen/dimen_10"
+        android:layout_margin="@dimen/dimen_10"
+        app:elevation="@dimen/dimen_6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:padding="@dimen/dimen_8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/blue"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgImage"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_70"
+                tools:srcCompat="@drawable/ic_calendar_appointment"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textServiceType"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:text="Book an appointment"
+                android:textSize="@dimen/text_size_20"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:fontFamily="@font/proxima_nova_black"
+                app:layout_constraintTop_toBottomOf="@id/imgImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

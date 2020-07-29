@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DroHealth</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="doctors">Doctors</string>
+    <string name="appointments">Appointments</string>
+    <string name="home">Home</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="notification">Notification</string>
+    <string name="filter">Filter</string>
+</resources>

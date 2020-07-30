@@ -21,13 +21,13 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgLogo"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/dimen_150"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintVertical_bias="0.05"
                 app:srcCompat="@drawable/ic_dro_logo" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -43,13 +43,16 @@
                 app:error="@{signUpViewModel.errorFirstNameLiveData}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:endIconDrawable="@drawable/ic_clear"
+                app:endIconTint="@color/purple"
+                app:endIconMode="clear_text"
+                app:endIconContentDescription="Clear users first name input"
                 app:layout_constraintTop_toBottomOf="@id/imgLogo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@={signUpViewModel.firstNameLiveData}"
-                    android:drawableEnd="@drawable/ic_clear_field"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,6 +66,10 @@
                 android:layout_marginRight="@dimen/dimen_16"
                 android:hint="@string/last_name"
                 app:errorEnabled="true"
+                app:endIconTint="@color/purple"
+                app:endIconDrawable="@drawable/ic_clear"
+                app:endIconMode="clear_text"
+                app:endIconContentDescription="Clear users last name input"
                 app:error="@{signUpViewModel.errorLastNameLiveData}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +79,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@={signUpViewModel.lastNameLiveData}"
-                    android:drawableEnd="@drawable/ic_clear_field"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +91,10 @@
                 android:layout_marginTop="@dimen/dimen_12"
                 android:layout_marginRight="@dimen/dimen_16"
                 android:hint="@string/email"
+                app:endIconTint="@color/purple"
+                app:endIconDrawable="@drawable/ic_clear"
+                app:endIconMode="clear_text"
+                app:endIconContentDescription="Clear email address input"
                 app:errorEnabled="true"
                 app:error="@{signUpViewModel.errorEmailLiveData}"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +105,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@={signUpViewModel.emailLiveData}"
-                    android:drawableEnd="@drawable/ic_clear_field"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +126,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@={signUpViewModel.passwordLiveData}"
-                    android:drawableEnd="@drawable/ic_clear_field"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,12 +133,12 @@
                 android:id="@+id/btnSignUp"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dimen_60"
-                android:layout_marginTop="@dimen/dimen_18"
+                android:layout_marginTop="@dimen/dimen_16"
                 android:fontFamily="@font/proxi_nova_regular"
                 android:text="@string/sign_up"
                 android:textSize="@dimen/text_size_20"
                 app:backgroundTint="@color/turquoise"
-                app:cornerRadius="@dimen/dimen_30"
+                app:cornerRadius="@dimen/dimen_25"
                 android:onClick="@{() -> signUpViewModel.registerUser()}"
                 app:layout_constraintEnd_toEndOf="@id/textInputPassword"
                 app:layout_constraintStart_toStartOf="@id/textInputPassword"
@@ -142,6 +150,7 @@
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dimen_10"
                 android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen_10"
                 app:layout_constraintEnd_toEndOf="@id/textInputPassword"
                 app:layout_constraintStart_toStartOf="@id/textInputPassword"
                 app:layout_constraintTop_toBottomOf="@id/btnSignUp"

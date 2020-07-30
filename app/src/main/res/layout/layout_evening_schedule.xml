@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/dimen_8"
+        android:layout_margin="@dimen/dimen_10"
+        app:cardCornerRadius="@dimen/dimen_6"
+        android:layout_height="@dimen/dimen_150">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgMoonLight"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_moon"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textMorning"
+                android:layout_width="wrap_content"
+                android:text="Evening"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:textSize="@dimen/text_size_16"
+                android:fontFamily="@font/proxima_nova_bold"
+                app:layout_constraintBottom_toBottomOf="@id/imgMoonLight"
+                app:layout_constraintStart_toEndOf="@id/imgMoonLight"
+                app:layout_constraintTop_toTopOf="@id/imgMoonLight"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textMorning"
+                app:layout_constraintTop_toTopOf="@id/textMorning"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textStartTimeSchedule"
+                    android:layout_width="wrap_content"
+                    android:text="06:00am"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:textSize="@dimen/text_size_16"
+                    android:fontFamily="@font/proxima_nova_alt_light"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen_8"
+                    android:background="@color/grey"
+                    android:layout_height="1dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textEndTimeSchedule"
+                    android:layout_width="wrap_content"
+                    android:text="11:30 am"
+                    android:layout_marginStart="@dimen/dimen_8"
+                    android:textSize="@dimen/text_size_16"
+                    android:fontFamily="@font/proxima_nova_alt_light"
+                    android:layout_height="wrap_content" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                app:layout_constraintStart_toEndOf="@id/imgMoonLight"
+                app:layout_constraintTop_toBottomOf="@id/imgMoonLight"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:background="@color/grey"
+                android:layout_height="1dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:singleSelection="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_separator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -28,9 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
         currentNavController?.observe(this, Observer {
             navController?.addOnDestinationChangedListener { controller, destination, arguments ->
-                /*if (destination.id == R.id.doctors) {
-                    setStatusBarColor()
-                }*/
+
             }
         })
     }

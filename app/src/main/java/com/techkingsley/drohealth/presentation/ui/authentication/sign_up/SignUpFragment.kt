@@ -29,6 +29,8 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = NavHostFragment.findNavController(this)
+        hasUserAlreadySignedUp()
+
         viewBinding = FragmentSignUpBinding.bind(requireView())
         viewBinding.signUpViewModel = signUpViewModel
         viewBinding.lifecycleOwner = this
@@ -43,5 +45,13 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 navController.navigate(R.id.action_signUpFragment_to_loginFragment)
             }
         })
+    }
+
+    private fun hasUserAlreadySignedUp(){
+        val storage = SharedPreferenceStorage(requireContext())
+        if(storage.getCurrentUser() != null){
+            navController.navigate(R.id.action_signUpFragment_to_homeActivity)
+            requireActivity().finish()
+        }
     }
 }

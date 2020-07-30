@@ -9,11 +9,14 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.techkingsley.drohealth.R
 import com.techkingsley.drohealth.data.local.model.Services
+import com.techkingsley.drohealth.data.local.storage.SharedPreferenceStorage
 import com.techkingsley.drohealth.databinding.FragmentHomeBinding
+import com.techkingsley.drohealth.presentation.utils.AppUtils
 
 class HomeFragment : Fragment(R.layout.fragment_home), ServicesAdapter.OnItemClickedListener {
 
     private lateinit var viewBinding: FragmentHomeBinding
+    private lateinit var storage: SharedPreferenceStorage
 
     companion object {
         @JvmStatic
@@ -27,8 +30,11 @@ class HomeFragment : Fragment(R.layout.fragment_home), ServicesAdapter.OnItemCli
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        storage = SharedPreferenceStorage(requireContext())
+        AppUtils.setStatusBarColor(requireActivity(), ContextCompat.getColor(requireContext(), R.color.white))
         val hostActivity = (activity as AppCompatActivity)
         hostActivity.setSupportActionBar(viewBinding.homeFragmentToolbar)
+        viewBinding.textUsersName.text = "Hi ${storage.getCurrentUser()?.firstName}"
         hostActivity.supportActionBar?.setDisplayShowTitleEnabled(false)
         hostActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_settings)
         hostActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -61,6 +67,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), ServicesAdapter.OnItemCli
     }
 
     override fun onServiceClicked(services: Services) {
-        // Handle onclick of services here
+        // TODO Handle onclick of services here
     }
 }

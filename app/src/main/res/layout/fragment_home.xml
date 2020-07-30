@@ -17,12 +17,14 @@
             app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light">
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textUsersName"
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -45,7 +47,7 @@
             android:id="@+id/textUpcoming"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginStart="@dimen/dimen_14"
             android:fontFamily="@font/proxima_nova_alt_bold"
             android:text="Upcoming"
             android:textSize="@dimen/text_size_18"
@@ -57,7 +59,7 @@
             android:id="@+id/cardLayout"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="@dimen/dimen_40"
-            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_8"
             android:layout_marginEnd="@dimen/dimen_10"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="@dimen/dimen_8"
@@ -80,7 +82,7 @@
             android:id="@+id/textServices"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
             android:text="Services"
             android:fontFamily="@font/proxima_nova_bold"
             android:textSize="@dimen/text_size_18"
@@ -92,7 +94,6 @@
             android:id="@+id/servicesRecyclerview"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_10"
             android:clipToPadding="false"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

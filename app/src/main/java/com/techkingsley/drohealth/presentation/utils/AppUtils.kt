@@ -1,5 +1,8 @@
 package com.techkingsley.drohealth.presentation.utils
 
+import android.app.Activity
+import android.os.Build
+import android.view.WindowManager
 import androidx.lifecycle.MutableLiveData
 import java.util.regex.Pattern
 
@@ -21,6 +24,14 @@ object AppUtils {
             pattern.matcher(email.trim()).matches()
         } else {
             false
+        }
+    }
+
+    fun setStatusBarColor(activity: Activity, color: Int, setUiVisibility: Boolean = false) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            activity.window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            val view = activity.window.decorView
+            activity.window.statusBarColor = color
         }
     }
 }

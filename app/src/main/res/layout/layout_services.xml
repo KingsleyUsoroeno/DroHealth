@@ -7,7 +7,8 @@
         android:layout_width="@dimen/dimen_150"
         android:layout_height="170dp"
         app:cardCornerRadius="@dimen/dimen_10"
-        android:layout_margin="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_14"
         app:elevation="@dimen/dimen_6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +39,7 @@
                 android:textSize="@dimen/text_size_20"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dimen_10"
-                android:fontFamily="@font/proxima_nova_black"
+                android:fontFamily="@font/proxima_nova_bold"
                 app:layout_constraintTop_toBottomOf="@id/imgImage"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

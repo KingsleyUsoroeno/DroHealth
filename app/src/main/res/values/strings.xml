@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">DroHealth</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile">Profile</string>
     <string name="doctors">Doctors</string>
     <string name="appointments">Appointments</string>
@@ -10,10 +8,17 @@
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="sign_up">Sign up</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="login">Login</string>
     <string name="notification">Notification</string>
     <string name="filter">Filter</string>
+    <string name="no_available_time_slot">No Available time Slot for that day</string>
+    <string name="available_times">Available times</string>
+    <string name="available_doctors">Available Doctors</string>
+    <string name="view_all">View All</string>
+    <string name="no_available_doctors_for_that_particular_time_slot">No Available doctors for that particular time Slot</string>
+    <string name="morning">Morning</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="book_an_appointment">Book an appointment</string>
 </resources>

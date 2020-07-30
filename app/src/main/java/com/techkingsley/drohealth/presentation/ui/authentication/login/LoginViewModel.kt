@@ -4,11 +4,11 @@ import android.app.Application
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.techkingsley.drohealth.data.local.storage.Storage
 import com.techkingsley.drohealth.presentation.utils.AppUtils.isEmailValid
 import com.techkingsley.drohealth.presentation.utils.AppUtils.validateFields
+import com.techkingsley.drohealth.presentation.utils.SingleEventLiveData
 
 class LoginViewModel internal constructor(val app: Application, private val storage: Storage) : AndroidViewModel(app) {
 
@@ -23,9 +23,9 @@ class LoginViewModel internal constructor(val app: Application, private val stor
     var errorEmailLiveData = MutableLiveData("")
     var errorPasswordLiveData = MutableLiveData("")
 
-    private val _loginState = MutableLiveData<Boolean>(false)
+    private val _loginState = SingleEventLiveData<Boolean>()
 
-    val loginState: LiveData<Boolean>
+    val loginState: SingleEventLiveData<Boolean>
         get() = _loginState
 
     fun loginUser() {
@@ -43,8 +43,8 @@ class LoginViewModel internal constructor(val app: Application, private val stor
 
         Log.i(TAG, "login email is $email and login password is $password")
 
-        val user = storage.getCurrentUser()
-        user?.let {
+        val user = storage.getCurrentUser() ?: return Toast.makeText(app.applicationContext, "Sorry user does not exist", Toast.LENGTH_LONG).show()
+        user.let {
             if (email == it.email && password == it.password) {
                 Toast.makeText(app.applicationContext, "Welcome back ${it.firstName} ${it.lastName}", Toast.LENGTH_LONG).show()
                 _loginState.value = true

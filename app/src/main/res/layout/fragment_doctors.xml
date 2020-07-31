@@ -99,10 +99,10 @@
                         android:id="@+id/indicator"
                         android:layout_width="0dp"
                         android:layout_height="48dp"
-                        app:ci_drawable="@drawable/circular_purple_drawable"
-                        app:ci_height="@dimen/dimen_6"
+                        app:ci_drawable="@drawable/rounded_gray_drawable"
+                        app:ci_height="@dimen/dimen_4"
                         app:ci_orientation="horizontal"
-                        app:ci_width="@dimen/dimen_6"
+                        app:ci_width="@dimen/dimen_4"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/availableTimeRecyclerview" />
@@ -164,10 +164,10 @@
                         android:id="@+id/doctorsRecyclerViewIndicator"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        app:ci_drawable="@drawable/circular_purple_drawable"
-                        app:ci_height="@dimen/dimen_6"
+                        app:ci_drawable="@drawable/rounded_gray_drawable"
+                        app:ci_height="@dimen/dimen_4"
                         app:ci_orientation="horizontal"
-                        app:ci_width="@dimen/dimen_6"
+                        app:ci_width="@dimen/dimen_4"
                         app:layout_constraintTop_toBottomOf="@id/availableDoctorsRecyclerview" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -176,6 +176,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/proxima_nova_bold"
                         android:gravity="center"
+                        android:layout_margin="@dimen/dimen_10"
                         android:text="@string/no_available_doctors_for_that_particular_time_slot"
                         android:textSize="20sp"
                         tools:visibility="visible"

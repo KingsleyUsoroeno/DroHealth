@@ -77,6 +77,7 @@
                 android:layout_gravity="center"
                 app:layout_constraintStart_toEndOf="@id/imgSunrise"
                 app:layout_constraintTop_toBottomOf="@id/imgSunrise"
+                app:layout_constraintBottom_toBottomOf="@id/imgSunrise"
                 android:layout_marginStart="@dimen/dimen_8"
                 android:background="@color/grey"
                 android:layout_height="1dp" />
@@ -92,7 +93,5 @@
                 app:layout_constraintTop_toBottomOf="@id/view_separator" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </com.google.android.material.card.MaterialCardView>
 </layout>

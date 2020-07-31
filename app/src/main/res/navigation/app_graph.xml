@@ -20,7 +20,7 @@
         <action
             android:id="@+id/action_signUpFragment_to_homeActivity"
             app:destination="@id/homeActivity"
-            app:popUpTo="@id/signUpFragment"
+            app:popUpTo="@id/homeActivity"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -38,6 +38,8 @@
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment"
             app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />

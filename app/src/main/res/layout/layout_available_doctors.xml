@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        app:cardElevation="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_4"
         android:layout_margin="@dimen/dimen_10">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -107,7 +107,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="Block"
+                android:text="Book"
                 app:backgroundTint="@color/purple"
                 android:layout_marginEnd="@dimen/dimen_10"
                 app:layout_constraintBottom_toBottomOf="@id/textDoctorsPrice"

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="loginViewModel"
             type="com.techkingsley.drohealth.presentation.ui.authentication.login.LoginViewModel" />
@@ -13,6 +12,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:context=".presentation.ui.authentication.login.LoginFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -57,7 +58,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_18"
+            android:layout_marginTop="@dimen/dimen_14"
             android:hint="@string/password"
             app:error="@{loginViewModel.errorPasswordLiveData}"
             app:errorEnabled="true"
@@ -78,13 +79,12 @@
             android:id="@+id/textForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_16"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/proxi_nova_regular"
             android:text="@string/forgot_password"
             android:textColor="@color/purple"
-            android:textSize="@dimen/text_size_17"
+            android:textSize="@dimen/text_size_16"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/textInputPassword"
             app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
@@ -137,7 +137,6 @@
                 android:textColor="@color/purple"
                 android:textSize="@dimen/text_size_18"
                 android:textStyle="bold" />
-
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

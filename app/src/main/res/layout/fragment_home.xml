@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/proxi_nova_regular"
-                    android:text="Hi Kingsley"
+                    tools:text="Hi Kingsley"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -38,7 +38,7 @@
                     android:id="@+id/imgHello"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_marginStart="@dimen/dimen_8"
                     app:srcCompat="@drawable/ic_wave" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.appbar.MaterialToolbar>
@@ -49,8 +49,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_14"
             android:fontFamily="@font/proxima_nova_alt_bold"
-            android:text="Upcoming"
+            android:layout_marginTop="@dimen/dimen_10"
             android:textSize="@dimen/text_size_18"
+            android:text="@string/upcoming"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/homeFragmentToolbar" />
@@ -58,7 +60,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardLayout"
             android:layout_width="@dimen/dimen_0"
-            android:layout_height="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_50"
             android:layout_marginTop="@dimen/dimen_8"
             android:layout_marginEnd="@dimen/dimen_10"
             app:cardBackgroundColor="@color/white"
@@ -72,9 +74,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/proxima_nova_alt_light"
+                android:fontFamily="@font/proxi_nova_regular"
                 android:gravity="center"
-                android:text="No Upcoming appointment, order or diagnostic test"
+                android:text="@string/no_upcoming_diagnostics"
                 android:textSize="@dimen/text_size_16" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -83,9 +85,10 @@
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_16"
-            android:text="Services"
+            android:text="@string/services"
             android:fontFamily="@font/proxima_nova_bold"
             android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/cardLayout"
             app:layout_constraintStart_toStartOf="@id/textUpcoming"
             app:layout_constraintTop_toBottomOf="@id/cardLayout" />

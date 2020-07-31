@@ -29,7 +29,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = NavHostFragment.findNavController(this)
-        hasUserAlreadySignedUp()
+        //hasUserAlreadySignedUp()
 
         viewBinding = FragmentSignUpBinding.bind(requireView())
         viewBinding.signUpViewModel = signUpViewModel

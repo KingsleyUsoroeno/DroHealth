@@ -21,4 +21,8 @@
     <string name="morning">Morning</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="book_an_appointment">Book an appointment</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="services">Services</string>
+    <string name="no_upcoming_diagnostics">No Upcoming appointment, order or diagnostic test</string>
 </resources>

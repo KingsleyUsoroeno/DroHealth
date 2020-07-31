@@ -7,7 +7,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="@dimen/dimen_8"
         android:layout_margin="@dimen/dimen_10"
-        app:cardCornerRadius="@dimen/dimen_6"
+        app:cardCornerRadius="@dimen/dimen_4"
         android:layout_height="@dimen/dimen_150">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,6 +77,7 @@
                 android:layout_gravity="center"
                 app:layout_constraintStart_toEndOf="@id/imgMoonLight"
                 app:layout_constraintTop_toBottomOf="@id/imgMoonLight"
+                app:layout_constraintBottom_toBottomOf="@id/imgMoonLight"
                 android:layout_marginStart="@dimen/dimen_8"
                 android:background="@color/grey"
                 android:layout_height="1dp" />
